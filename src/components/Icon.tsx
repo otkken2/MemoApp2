@@ -7,7 +7,7 @@ import fontSelection from '../../assets/fonts/selection.json'
 const CustomIcon = createIconSetFromIcoMoon(
   fontSelection,
   'icomoon',
-  'icomoon.ttf'
+  fontData
 )
 
 interface Props {
