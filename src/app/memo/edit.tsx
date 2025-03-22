@@ -7,6 +7,11 @@ import {
 import { Header } from '../../components/Header'
 import { CircleButton } from '../../components/CircleButton'
 import { Icon } from '../../components/Icon'
+import { router } from 'expo-router'
+
+const handlePress = () => {
+  router.back()
+}
 
 const Edit = () => {
   return (
@@ -19,7 +24,7 @@ const Edit = () => {
           multiline
         />
       </View>
-      <CircleButton>
+      <CircleButton onPress={handlePress}>
         <Icon name="check" size={40} color="white" />
       </CircleButton>
     </KeyboardAvoidingView>
