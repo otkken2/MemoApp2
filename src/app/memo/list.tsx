@@ -2,13 +2,22 @@ import { View, StyleSheet } from 'react-native'
 import { MemoListItem } from '../../components/MemoListItem'
 import { CircleButton } from '../../components/CircleButton'
 import { Icon } from '../../components/Icon'
-import { router } from 'expo-router'
-
+import { router, useNavigation } from 'expo-router'
+import { useEffect } from 'react'
+import { LogoutButton } from '../../components/LogoutButton'
 const handlePress = () => {
   router.push('/memo/create')
 }
 
-const List = () => {
+const Index = () => {
+  const navigation = useNavigation()
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => { return <LogoutButton /> }
+    })
+  }, [])
+
   return (
     <View style={styles.container}>
       <View>
@@ -30,4 +39,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default List
+export default Index
