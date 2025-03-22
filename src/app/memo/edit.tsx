@@ -4,7 +4,6 @@ import {
   TextInput,
   KeyboardAvoidingView
 } from 'react-native'
-import { Header } from '../../components/Header'
 import { CircleButton } from '../../components/CircleButton'
 import { Icon } from '../../components/Icon'
 import { router } from 'expo-router'
@@ -16,7 +15,6 @@ const handlePress = () => {
 const Edit = () => {
   return (
     <KeyboardAvoidingView style={styles.container} behavior='height'>
-      <Header />
       <View style={styles.inputContainer}>
         <TextInput
           value={'買い物\n\nリスト'}
