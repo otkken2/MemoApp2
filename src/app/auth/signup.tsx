@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, TextInput } from "react-native"
+import { View, StyleSheet, Text, TextInput, Alert } from "react-native"
 import { Header } from "../../components/Header"
 import { Button } from "../../components/Button"
 
@@ -10,7 +10,7 @@ const Signup = () => {
         <Text style={styles.title}>Sign Up</Text>
         <TextInput style={styles.input} value="Email address" />
         <TextInput style={styles.input} value="Password" />
-        <Button label="Submit" />
+        <Button label="Submit" onPress={() => { Alert.alert('Sign up') }} />
         <View style={styles.footer}>
           <Text style={styles.footerText}>Already registered?</Text>
           <Text style={styles.footerLink}>Log in.</Text>
